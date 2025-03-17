@@ -1,10 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: ['-c', 'rm -rf /workspace && mkdir /workspace']
+  args: ['-c', 'rm -rf /workspace/*']
   id: 'Clean Workspace'
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://github.com/your-repo/your-project.git', '/workspace']
+  args: ['clone', 'https://github.com/demon-o5/gcp_project_1.git', '/workspace']
   id: 'Clone Repository'
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['rsync', '-r', '/workspace', 'gs://us-central1-composer-latest-d7e51211-bucket/dags']
