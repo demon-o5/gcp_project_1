@@ -1,7 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/demon-o5/gcp_project_1.git', '/workspace']
+  id: 'Clone Repository'
+  waitFor: ['-']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['info']
+  id: 'Debug Info'
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['rsync', '-r', '.', 'gs://us-central1-composer-latest-d7e51211-bucket/dags']
+  args: ['rsync', '-r', '/workspace', 'gs://us-central1-composer-latest-d7e51211-bucket/dags']
+  id: 'Sync to Composer Bucket'
 options:
   logging: CLOUD_LOGGING_ONLY
