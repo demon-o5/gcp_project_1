@@ -20,7 +20,7 @@ dag = DAG(
     tags=['shashi', 'dhar', 'data'],
     catchup=False
 )
-# added schema
+# added schema--
 schemas = [
     {'name': 'column1', 'type': 'STRING', 'mode': 'NULLABLE'},
     {'name': 'column2', 'type': 'STRING', 'mode': 'NULLABLE'},
