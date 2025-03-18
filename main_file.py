@@ -12,7 +12,7 @@ from airflow.contrib.operators.gcs_to_bq import GoogleCloudStorageToBigQueryOper
 args = {
     'owner': 'shashidhar'
 }
-#added comments---
+#added comments--
 dag = DAG(
     dag_id='Gcs_to_bq_load',
     default_args=args,
