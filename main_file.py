@@ -26,7 +26,7 @@ schemas = [
     {'name': 'column2', 'type': 'STRING', 'mode': 'NULLABLE'},
     {'name': 'column3', 'type': 'STRING', 'mode': 'NULLABLE'},
 ]
-
+#this method reads csv file.
 def read_csv_file(bucket_name, file_name):
     client = storage.Client()
     bucket = client.get_bucket(bucket_name)
