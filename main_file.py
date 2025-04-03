@@ -8,8 +8,7 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.dummy import DummyOperator
 from google.cloud import storage
 from airflow.contrib.operators.gcs_to_bq import GoogleCloudStorageToBigQueryOperator
-# added default Args
-#added the comments and things
+
 args = {
     'owner': 'shashidhar'
 }
