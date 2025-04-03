@@ -13,7 +13,6 @@ args = {
     'owner': 'shashidhar'
 }
 #added dag
-#addddgi
 dag = DAG(
     dag_id='Gcs_to_bq_load',
     default_args=args,
@@ -22,14 +21,12 @@ dag = DAG(
     catchup=False
 )
 # added schema--
-# 3 columns are added
 schemas = [
     {'name': 'column1', 'type': 'STRING', 'mode': 'NULLABLE'},
     {'name': 'column2', 'type': 'STRING', 'mode': 'NULLABLE'},
     {'name': 'column3', 'type': 'STRING', 'mode': 'NULLABLE'},
 ]
 #this method reads csv file.
-#added
 def read_csv_file(bucket_name, file_name):
     client = storage.Client()
     bucket = client.get_bucket(bucket_name)
