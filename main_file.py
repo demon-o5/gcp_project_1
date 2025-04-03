@@ -22,6 +22,7 @@ dag = DAG(
     catchup=False
 )
 # added schema--
+# 3 columns are added
 schemas = [
     {'name': 'column1', 'type': 'STRING', 'mode': 'NULLABLE'},
     {'name': 'column2', 'type': 'STRING', 'mode': 'NULLABLE'},
